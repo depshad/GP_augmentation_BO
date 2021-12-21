@@ -18,6 +18,8 @@ Create inital data points for bayesian optimisation.
 
 Set sort_points to True to get the highest valued initial data points to run subsequent optimisation.
 
+#### Usage
+
  ```shell script
 
 python ./MNIST_Norm_Task/scripts/Calculate_objective.py --dataset_path 'mnist_x.npy' \
@@ -39,5 +41,13 @@ data_dir : Directory which contains the initial data points
 
 vae_model : File path for pretrained vae model
 
+#### Usage
+ ```shell script
 
+python ./MNIST_Norm_Task/scripts/GP_augment_norm_task.py --result_dir 'path to save results' \
+                                                --data_val_path 'Created in Calculate_objective script' \
+                                                --data_dir 'Directory path for inital data points' \
+                                                --vae_model 'pretained vae model' \
+                                                --naive_aug_flag 'True'
 
+ ```
