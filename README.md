@@ -22,7 +22,7 @@ Set sort_points to True to get the highest valued initial data points to run sub
 
 python ./MNIST_Norm_Task/scripts/Calculate_objective.py --dataset_path 'mnist_x.npy' \
                                                 --label_path 'mnist_y.npy' \
-                                                --save_dir 'path to save the initial data' \
+                                                --save_dir 'path to save the initial data for BO' \
                                                 --sort_points 'True'
  ```
 
