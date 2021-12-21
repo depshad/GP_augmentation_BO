@@ -93,21 +93,21 @@ naive_aug_smooth_flag=args.naive_aug_smooth_flag
 # Create a new directory for the new data points
 my_parser.add_argument('--result_dir',
                         type=str,
-                       default=False)   
+                       default=None)   
 root_dir=args.result_dir
 my_parser.add_argument('--data_val_path',
                        type=str,
-                       default=False)  
+                       default=None)  
 data_val_path=args.data_val_path
 data_val = np.load(data_val_path)
 my_parser.add_argument('--data_dir',
                        type=str,
-                       default=False)   
+                       default=None)   
 data_dir=args.data_dir
 
 my_parser.add_argument('--vae_model',
                        type=str,
-                       default=False)   
+                       default=None)   
 
 vae_init_model_path = args.vae_model
 

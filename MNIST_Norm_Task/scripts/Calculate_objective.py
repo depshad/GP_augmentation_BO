@@ -7,26 +7,39 @@ import cv2
 import itertools
 import argparse
 
+def str2bool(v):
+    print(v.lower())
+    if v.lower() in ('yes', 'true', 't', 'y', '1'):
+        return True
+    elif v.lower() in ('no', 'false', 'f', 'n', '0'):
+        return False
+    else:
+        raise argparse.ArgumentTypeError('Boolean value expected.')
+
 my_parser = argparse.ArgumentParser(description='List the arguments')
 
 my_parser.add_argument('--dataset_path',
                        type=str,
-                       default=False)
+                       default=None)
 
 my_parser.add_argument('--label_path',
                        type=str,
-                       default=False)
+                       default=None)
 
 my_parser.add_argument('--save_dir',
                        type=str,
+                       default=None)
+
+my_parser.add_argument('--sort_points',
+                       type=str2bool,
                        default=False)
+
+
 
 args = my_parser.parse_args()
 
 dataset_path = args.dataset_path
 label_path =   args.label_path
-
-sort_points= True
 
 def black_box_func(X,ref):
     return -1*LA.norm(X-ref)
@@ -43,7 +56,7 @@ print(X.shape,y.shape)
 
 data_dir= args.save_dir
 
-if sort_points:
+if args.sort_points:
     Z_train=np.array([])
     X_train,Y_train = X[:1000], y[:1000]
     X_val,Y_val= X[2000:], y[2000:]
