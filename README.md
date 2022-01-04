@@ -1,4 +1,4 @@
-# GP_augmentation_BO
+# Uncertainty-aware Labelled Augmentations for High Dimensional Latent Space Bayesian Optimisation
 
 ## Abstract 
 
