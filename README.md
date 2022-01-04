@@ -33,6 +33,8 @@ python ./MNIST_Norm_Task/scripts/Calculate_objective.py --dataset_path 'mnist_x.
 #### Attributes
 To run desired experiments, set appropriate flags (GP_aug_flag, naive_aug_flag, etc.) to True as the argument.
 
+More implementation details can be found in the code itself.
+
 result_dir : Directory to save results 
 
 data_val_path : File path for validation data 
