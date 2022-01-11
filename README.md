@@ -1,5 +1,7 @@
 # Uncertainty-aware Labelled Augmentations for High Dimensional Latent Space Bayesian Optimisation
 
+Paper : https://openreview.net/pdf?id=C7pY5Wjwk0d 
+
 ## Abstract 
 
 Black-box optimization problems are ubiquitous and of importance in many critical areas of science and engineering. Bayesian optimisation (BO) over the past
